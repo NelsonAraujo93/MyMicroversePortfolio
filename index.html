@@ -10,16 +10,16 @@
 <body>
     <header>
         <section class="mobile-nav">
-            <div class="landing-header">
-                <div class="header-image"></div>
+            <nav class="landing-header full-width">
+                <div class="header-image full-width"></div>
                 <button id='open-menu-btn' class="menu-btn">
-                    <img src="./assets/ic_menu.svg">
+                    <img src="./assets/ic_menu.svg" alt="Burger menu icon">
                 </button>
-            </div>
-            <nav id='menu-container'>
-                <div class="top-image"></div>
+            </nav>
+            <nav id='menu-container'  class='full-width' aria-controls="open-menu-btn">
+                <div class="top-image full-width"></div>
                 <button id='close-menu-btn' class="menu-btn">
-                    <img src="./assets/Union.svg">
+                    <img src="./assets/Union.svg" alt="Cancel icon">
                 </button>
                 <ul>
                     <li>
@@ -35,7 +35,7 @@
                         <a>Contact</a>
                     </li>
                 </ul>
-                <div class="bottom-image"></div>
+                <div class="bottom-image full-width"></div>
             </nav>
         </section>
     </header>
@@ -43,11 +43,11 @@
         <section class="introduction-mobile">
             <h1>Nelson Araujo</h1>
             <p>Hello! and welcome to my website. I am a web developer and why not your future collaborator? Take some minutes to look at my works. And if you want to know more about me, do not hesitate contacting.</p>
-            <button class="main-btn">
+            <button class="main-btn full-width">
                 Start collaborating
             </button>
         </section>
-        <div class="deco-image"></div>
+        <div class="deco-image full-width"></div>
     </main>
     <script src="./index.js"></script>
 </body>

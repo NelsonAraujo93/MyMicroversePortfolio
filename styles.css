@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 body {
   margin: 0;
 }
@@ -9,9 +11,12 @@ body {
   border: none;
 }
 
+.full-width {
+  width: 100%;
+}
+
 #menu-container {
   height: 100vh;
-  width: 100%;
   top: 0;
   left: 0;
   z-index: 2;
@@ -24,19 +29,9 @@ body {
   transition: all 250ms ease-in-out;
 }
 
-.ul-menu {
-  display: flex;
-  height: 368px;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .header-image {
   background: url('./assets/image_geometry_1.png');
   height: 74px;
-  width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   align-self: flex-start;
@@ -45,7 +40,6 @@ body {
 .top-image {
   background: url('./assets/image_geometry_menu_1.png');
   height: 114px;
-  width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   align-self: flex-start;
@@ -54,7 +48,6 @@ body {
 .bottom-image {
   background: url('./assets/image_geometry_menu_2.png');
   height: 150px;
-  width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   align-self: flex-start;
@@ -63,8 +56,7 @@ body {
 .deco-image {
   background: url('./assets/image_geometry_2.png');
   height: 160px;
-  width: 100%;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   align-self: flex-start;
 }
@@ -93,7 +85,6 @@ body {
   display: flex;
   position: relative;
   height: auto;
-  width: 100%;
 }
 
 .introduction-mobile {
@@ -106,7 +97,7 @@ body {
 }
 
 h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 60px;
   font-weight: 400;
   line-height: 50px;
@@ -122,7 +113,6 @@ h1 {
 }
 
 .main-btn {
-  width: 100%;
   height: 42px;
   background: #1a2236;
   color: white;
