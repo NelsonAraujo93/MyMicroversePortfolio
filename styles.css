@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+}
+
+.menu-btn {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.menu-container{
+  height: 568px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ul-menu{
+  display: flex;
+  height: 368px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-image {
+  background: aliceblue;
+  height: 100px;
+  width: 100%;
+}
