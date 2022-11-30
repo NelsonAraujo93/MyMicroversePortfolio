@@ -60,6 +60,15 @@ body {
   align-self: flex-start;
 }
 
+.deco-image {
+  background: url('./assets/image_geometry_2.png');
+  height: 160px;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-self: flex-start;
+}
+
 #close-menu-btn,
 #open-menu-btn {
   position: absolute;
