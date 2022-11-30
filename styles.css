@@ -20,6 +20,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
   transition: all 250ms ease-in-out;
 }
 
@@ -85,4 +86,42 @@ body {
   position: relative;
   height: auto;
   width: 100%;
+}
+
+.introduction-mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-self: space-between;
+}
+
+h1 {
+  font-family: 'Poppins';
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.introduction-mobile p {
+  text-align: justify;
+  font-size: 14px;
+  font-family: 'Poppins';
+  margin-bottom: 40px;
+}
+
+.main-btn{
+  width: 100%;
+  height: 42px;
+  background: #1A2236;
+  color: white;
+  font-size: 16px;
+  font-family: 'Poppins';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
 }
