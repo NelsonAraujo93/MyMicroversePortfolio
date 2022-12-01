@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+  margin: 0;
+}
+
+.menu-btn {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.full-width {
+  width: 100%;
+}
+
+#menu-container {
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  transition: all 250ms ease-in-out;
+}
+
+.header-image {
+  background: url('./assets/image_geometry_1.png');
+  height: 74px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-self: flex-start;
+}
+
+.top-image {
+  background: url('./assets/image_geometry_menu_1.png');
+  height: 114px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-self: flex-start;
+}
+
+.bottom-image {
+  background: url('./assets/image_geometry_menu_2.png');
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-self: flex-start;
+}
+
+.deco-image {
+  background: url('./assets/image_geometry_2.png');
+  height: 160px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-self: flex-start;
+}
+
+#close-menu-btn,
+#open-menu-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#menu-container ul {
+  padding: 0;
+}
+
+#menu-container li {
+  list-style: none;
+  margin-bottom: 4px;
+}
+
+#menu-container li a {
+  font-family: 'Poppins', sans-serif;
+}
+
+.landing-header {
+  display: flex;
+  position: relative;
+  height: auto;
+}
+
+.introduction-mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-self: space-between;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.introduction-mobile p {
+  text-align: justify;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 40px;
+}
+
+.main-btn {
+  height: 42px;
+  background: #1a2236;
+  color: white;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
