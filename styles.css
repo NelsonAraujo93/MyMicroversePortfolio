@@ -113,6 +113,11 @@ body {
   right: 20px;
 }
 
+.knowledge-item ul {
+  padding-left: 16px;
+  margin-top: 20px;
+}
+
 #menu-container ul {
   padding: 0;
 }
@@ -171,28 +176,21 @@ p {
 }
 
 .main-btn:hover {
-  background: #FFFFFF;
+  background: #fff;
   color: black;
 }
 
 .main-btn:active {
   border: 2px solid black;
-  background: #FFFFFF;
-  color: black;
-}
-
-.main-btn .btn-label {
-  transition: all 250ms ease-in-out;
-}
-
-.main-btn:hover .btn-label {
+  background: #fff;
   color: black;
 }
 
 .works-mobile {
   box-sizing: border-box;
 }
-.works-mobile h1{
+
+.works-mobile h1 {
   padding-left: 16px;
 }
 
@@ -216,7 +214,7 @@ p {
   display: grid;
   grid-template-rows: auto auto auto;
   grid-template-columns: 1fr;
-  background: #1A2236;
+  background: #1a2236;
   border: 0.333333px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(0.5px);
   padding: 20px;
@@ -227,7 +225,7 @@ p {
   font-weight: 300;
   font-style: normal;
   font-size: 20px;
-  color: #FFFFFF;
+  color: #fff;
   margin-top: 0;
   margin-bottom: 16px;
   line-height: 16px;
@@ -249,7 +247,7 @@ p {
   font-size: 10.3334px;
   font-weight: 300;
   height: 20px;
-  background: #98DEDE;
+  background: #98dede;
   padding: 6px 10px;
   box-sizing: border-box;
   display: flex;
@@ -260,7 +258,7 @@ p {
 .card-btn {
   height: 44px;
   width: 178px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #fff;
   box-sizing: border-box;
   display: flex;
   background: transparent;
@@ -272,14 +270,22 @@ p {
 }
 
 .card-btn:hover {
-  background: white ;
+  background: white;
   color: black;
 }
 
 .btn-label {
   font-size: 16px;
-  color: #FFFFFF;
+  color: #fff;
   transition: all 250ms ease-in-out;
+}
+
+.main-btn .btn-label {
+  transition: all 250ms ease-in-out;
+}
+
+.main-btn:hover .btn-label {
+  color: black;
 }
 
 .card-btn:hover .btn-label {
@@ -306,7 +312,7 @@ p {
 }
 
 .main-btn:hover .btn-download-icon {
-  background:url('./assets/ic_download_black.svg');
+  background: url('./assets/ic_download_black.svg');
 }
 
 .about-mobile {
@@ -318,15 +324,15 @@ p {
 }
 
 .yellow {
-  background: #FEBF52;
+  background: #febf52;
 }
 
 .red {
-  background: #E2505C;
+  background: #e2505c;
 }
 
 .blue {
-  background: #1C528A;
+  background: #1c528a;
 }
 
 .knowledge-container {
@@ -338,7 +344,7 @@ p {
 }
 
 .knowledge-item {
-  color: #FFFFFF;
+  color: #fff;
   height: 289px;
   padding: 50px;
   box-sizing: border-box;
@@ -353,11 +359,6 @@ p {
   font-size: 20px;
   line-height: 20px;
   margin-bottom: 0;
-}
-
-.knowledge-item ul {
-  padding-left: 16px;
-  margin-top: 20px;
 }
 
 .bottom-rigth-icon {
