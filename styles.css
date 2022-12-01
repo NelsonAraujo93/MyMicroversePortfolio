@@ -113,6 +113,12 @@ body {
   right: 20px;
 }
 
+.main-works-container {
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  grid-template-columns: 1fr;
+}
+
 .knowledge-item ul {
   padding-left: 16px;
   margin-top: 20px;
