@@ -1,5 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-Ligth';
+  src: url('./assets/fonts/Poppins-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: url('./assets/fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-SemiBold';
+  src: url('./assets/fonts/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-ExtraBold';
+  src: url('./assets/fonts/Poppins-ExtraBold.ttf');
+}
+
 body {
   margin: 0;
 }
@@ -9,6 +34,26 @@ body {
   height: 20px;
   background-color: transparent;
   border: none;
+}
+
+.poppins-font-regular {
+  font-family: 'Poppins', sans-serif;
+}
+
+.poppins-font-ligth {
+  font-family: 'Poppins-Ligth', sans-serif;
+}
+
+.poppins-font-medium {
+  font-family: 'Poppins-Medium', sans-serif;
+}
+
+.poppins-font-semibold {
+  font-family: 'Poppins-SemiBold', sans-serif;
+}
+
+.poppins-font-extrabold {
+  font-family: 'Poppins-ExtraBold', sans-serif;
 }
 
 .full-width {
@@ -68,6 +113,17 @@ body {
   right: 20px;
 }
 
+.main-works-container {
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  grid-template-columns: 1fr;
+}
+
+.knowledge-item ul {
+  padding-left: 16px;
+  margin-top: 20px;
+}
+
 #menu-container ul {
   padding: 0;
 }
@@ -105,10 +161,9 @@ h1 {
   margin-bottom: 20px;
 }
 
-.introduction-mobile p {
+p {
   text-align: justify;
   font-size: 14px;
-  font-family: 'Poppins', sans-serif;
   margin-bottom: 40px;
 }
 
@@ -117,9 +172,223 @@ h1 {
   background: #1a2236;
   color: white;
   font-size: 16px;
-  font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: none;
+  border: 1px solid black;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.main-btn:hover {
+  background: #fff;
+  color: black;
+}
+
+.main-btn:active {
+  border: 2px solid black;
+  background: #fff;
+  color: black;
+}
+
+.works-mobile {
+  box-sizing: border-box;
+}
+
+.works-mobile h1 {
+  padding-left: 16px;
+}
+
+.work-card {
+  display: grid;
+  grid-template-rows: 186px 156px;
+  grid-template-columns: 1fr;
+}
+
+.image-container {
+  display: flex;
+  height: 100%;
+}
+
+.image-container img {
+  object-fit: cover;
+}
+
+.detail-container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+  background: #1a2236;
+  border: 0.333333px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(0.5px);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card-title {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 16px;
+}
+
+.card-categories-container {
+  display: flex;
+  height: 20px;
+  margin-bottom: 20px;
+  list-style: none;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin-top: 0;
+}
+
+.card-category {
+  font-size: 10.3334px;
+  font-weight: 300;
+  height: 20px;
+  background: #98dede;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-btn {
+  height: 44px;
+  width: 178px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  display: flex;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+.card-btn:hover {
+  background: white;
+  color: black;
+}
+
+.btn-label {
+  font-size: 16px;
+  color: #fff;
+  transition: all 250ms ease-in-out;
+}
+
+.main-btn .btn-label {
+  transition: all 250ms ease-in-out;
+}
+
+.main-btn:hover .btn-label {
+  color: black;
+}
+
+.card-btn:hover .btn-label {
+  color: black;
+}
+
+.btn-arrow-icon {
+  background: url('./assets/ic_arrow_right.svg');
+  height: 25px;
+  width: 25px;
+  transition: all 250ms ease-in-out;
+}
+
+.card-btn:hover .btn-arrow-icon {
+  background: url('./assets/ic_arrow_right_black.svg');
+}
+
+.btn-download-icon {
+  background: url('./assets/ic_download.svg');
+  height: 25px;
+  width: 26px;
+  object-fit: contain;
+  transition: all 250ms ease-in-out;
+}
+
+.main-btn:hover .btn-download-icon {
+  background: url('./assets/ic_download_black.svg');
+}
+
+.about-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56px 16px;
+  box-sizing: border-box;
+}
+
+.yellow {
+  background: #febf52;
+}
+
+.red {
+  background: #e2505c;
+}
+
+.blue {
+  background: #1c528a;
+}
+
+.knowledge-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 40px;
+}
+
+.knowledge-item {
+  color: #fff;
+  height: 289px;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.knowledge-title {
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 0;
+}
+
+.bottom-rigth-icon {
+  width: 102px;
+  height: 102px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.knowledge-list-item {
+  font-size: 18px;
+}
+
+.hashtag-icon {
+  background: url('./assets/ic_languages_mob.png');
+}
+
+.square-icon {
+  background: url('./assets/ic_framework.svg');
+  width: 96px;
+  height: 96px;
+}
+
+.ligthbulb-icon {
+  background: url('./assets/ic_skills.svg');
 }
