@@ -428,3 +428,23 @@ p#contact-form-text {
   transition: all 250ms ease-in-out;
   margin: 0;
 }
+textarea#message {
+  resize: none;
+  height: 112px;
+  border-radius: 4px;
+  padding: 15px 16px;
+  box-sizing: border-box;
+  border-color: #dfdfe0;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+  transition: all 250ms ease-in-out;
+}
+label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  color: #7d7c84;
+}
+input {
+  border: none;
+  font-size: 14px;
+}
