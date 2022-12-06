@@ -392,3 +392,21 @@ p {
 .ligthbulb-icon {
   background: url('./assets/ic_skills.svg');
 }
+
+h2#contact-form-haeder {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 52px;
+  font-size: 40px;
+  text-align: center;
+}
+
+p#contact-form-text {
+  text-align: center;
+  overflow: aling;
+  font-size: 20px;
+  font-family: 'Poppins',sans-serif;
+  color: #ebebff;
+  overflow-wrap: break-word
+}
