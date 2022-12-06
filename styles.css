@@ -392,3 +392,64 @@ p {
 .ligthbulb-icon {
   background: url('./assets/ic_skills.svg');
 }
+
+#form-m {
+  margin-bottom: 64px;
+}
+
+.input-fieldset {
+  border-radius: 4px;
+  height: 52px;
+  border: 1px solid #dfdfe0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transition: all 250ms ease-in-out;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.input-fieldset:focus-within {
+  border: 1px solid #1a2236;
+}
+
+label {
+  font-family: 'Poppins', sans-serif;
+  color: #7d7c84;
+  font-size: 10px;
+}
+
+textarea {
+  height: 112px;
+  resize: none;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 4px;
+  border-color: #dfdfe0;
+  margin-bottom: 20px;
+  padding: 15px 16px;
+  box-sizing: border-box;
+  transition: all 250ms ease-in-out;
+}
+
+textarea:focus-visible {
+  outline: none;
+  border: 1px solid #1a2236;
+}
+
+.form-header {
+  padding: 0 18px;
+}
+
+form {
+  padding: 0 18px;
+}
+
+input {
+  border: none;
+  font-size: 14px;
+}
+
+input:focus-visible {
+  outline: none;
+}
