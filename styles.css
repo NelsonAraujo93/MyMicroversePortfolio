@@ -448,3 +448,15 @@ input {
   border: none;
   font-size: 14px;
 }
+.input-fieldset:focus-within {
+  border: 1px solid #1a2236;
+}
+textarea:focus-visible {
+  outline: none;
+  border: 1px solid #1a2236;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
