@@ -427,6 +427,7 @@ p#contact-form-text {
   justify-content: center;
   transition: all 250ms ease-in-out;
   margin: 0;
+  margin-bottom: 8px;
 }
 textarea#message {
   resize: none;
