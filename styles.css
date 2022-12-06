@@ -415,3 +415,16 @@ p#contact-form-text {
   flex-direction: column;
   margin-bottom: 64px;
 }
+.form-header, .contact-form {
+  padding: 0 18px;
+}
+.input-fieldset{
+  border-radius: 4px;
+  height: 52px;
+  border: 1px solid #dfdfe0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 250ms ease-in-out;
+  margin: 0;
+}
