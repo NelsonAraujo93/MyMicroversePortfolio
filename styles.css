@@ -406,19 +406,23 @@ p#contact-form-text {
   text-align: center;
   overflow: aling;
   font-size: 20px;
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #ebebff;
-  overflow-wrap: break-word
+  overflow-wrap: break-word;
 }
+
 #form-m {
   display: flex;
   flex-direction: column;
   margin-bottom: 64px;
 }
-.form-header, .contact-form {
+
+.form-header,
+.contact-form {
   padding: 0 18px;
 }
-.input-fieldset{
+
+.input-fieldset {
   border-radius: 4px;
   height: 52px;
   border: 1px solid #dfdfe0;
@@ -429,6 +433,7 @@ p#contact-form-text {
   margin: 0;
   margin-bottom: 8px;
 }
+
 textarea#message {
   resize: none;
   height: 112px;
@@ -440,18 +445,22 @@ textarea#message {
   margin-bottom: 20px;
   transition: all 250ms ease-in-out;
 }
+
 label {
   font-family: 'Poppins', sans-serif;
   font-size: 10px;
   color: #7d7c84;
 }
+
 input {
   border: none;
   font-size: 14px;
 }
+
 .input-fieldset:focus-within {
   border: 1px solid #1a2236;
 }
+
 textarea:focus-visible {
   outline: none;
   border: 1px solid #1a2236;
@@ -460,4 +469,3 @@ textarea:focus-visible {
 input:focus-visible {
   outline: none;
 }
-
