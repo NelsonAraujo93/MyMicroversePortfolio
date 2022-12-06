@@ -410,3 +410,8 @@ p#contact-form-text {
   color: #ebebff;
   overflow-wrap: break-word
 }
+#form-m {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 64px;
+}
