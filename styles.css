@@ -507,6 +507,13 @@ section.footer-m {
   transition: all 250ms ease-in-out;
   height: 44px;
   font-size: 16px;
+  cursor: pointer;
+}
+
+.footer-btn:hover {
+  background: white;
+  color: #1a2236;
+  border: 1px solid #1a2236;
 }
 
 .footer-btn:active {
@@ -525,6 +532,12 @@ section.footer-m {
 }
 
 .footer-btn:active .btn-footer-icon {
+  background: url('./assets/ic_link_teal_active.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer-btn:hover .btn-footer-icon {
   background: url('./assets/ic_link_teal_active.svg');
   background-repeat: no-repeat;
   background-size: cover;
