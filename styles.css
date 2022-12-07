@@ -124,6 +124,19 @@ body {
   margin-top: 20px;
 }
 
+.footer-m ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-left: 0;
+}
+
+.footer-m img {
+  width: 25px;
+  height: 25px;
+}
+
 #menu-container ul {
   padding: 0;
 }
@@ -391,4 +404,141 @@ p {
 
 .ligthbulb-icon {
   background: url('./assets/ic_skills.svg');
+}
+
+h2#contact-form-haeder {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 52px;
+  font-size: 40px;
+  text-align: center;
+}
+
+p#contact-form-text {
+  text-align: center;
+  overflow: aling;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #ebebff;
+  overflow-wrap: break-word;
+}
+
+#form-m {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 64px;
+  background-color: #f9f9fa;
+}
+
+.form-header,
+.contact-form {
+  padding: 0 18px;
+}
+
+.input-fieldset {
+  border-radius: 4px;
+  height: 52px;
+  border: 1px solid #dfdfe0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 250ms ease-in-out;
+  margin: 0;
+  margin-bottom: 8px;
+  background: white;
+}
+
+textarea#message {
+  resize: none;
+  height: 112px;
+  border-radius: 4px;
+  padding: 15px 16px;
+  box-sizing: border-box;
+  border-color: #dfdfe0;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+  transition: all 250ms ease-in-out;
+}
+
+label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  color: #7d7c84;
+}
+
+input {
+  border: none;
+  font-size: 14px;
+}
+
+.input-fieldset:focus-within {
+  border: 1px solid #1a2236;
+}
+
+textarea:focus-visible {
+  outline: none;
+  border: 1px solid #1a2236;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+section.footer-m {
+  background-color: #1a2236;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 16px;
+}
+
+.footer-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 180px;
+  gap: 8px;
+  color: #92dcdc;
+  background: #1a2236;
+  border: 1px solid #1a2236;
+  transition: all 250ms ease-in-out;
+  height: 44px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.footer-btn:hover {
+  background: white;
+  color: #1a2236;
+  border: 1px solid #1a2236;
+}
+
+.footer-btn:active {
+  background: white;
+  color: #1a2236;
+  border: 1px solid #1a2236;
+}
+
+.btn-footer-icon {
+  width: 25px;
+  height: 25px;
+  background: url('./assets/ic_link_teal.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 250ms ease-in-out;
+}
+
+.footer-btn:active .btn-footer-icon {
+  background: url('./assets/ic_link_teal_active.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer-btn:hover .btn-footer-icon {
+  background: url('./assets/ic_link_teal_active.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
