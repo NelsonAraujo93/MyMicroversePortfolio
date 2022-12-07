@@ -433,6 +433,7 @@ p#contact-form-text {
   transition: all 250ms ease-in-out;
   margin: 0;
   margin-bottom: 8px;
+  background: white;
 }
 
 textarea#message {
