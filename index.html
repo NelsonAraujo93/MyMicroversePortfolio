@@ -38,16 +38,40 @@
                 <div class="bottom-image full-width"></div>
             </nav>
         </section>
+        <section class="desktop-nav">
+            <nav id='menu-container'  class='full-width' aria-controls="open-menu-btn">
+                <ul>
+                    <li>
+                        <a class="poppins-font-regular">Hello</a>
+                        <div class="border-bottom"></div>
+                    </li>
+                    <li>
+                        <a class="poppins-font-regular">Portfolio</a>
+                        <div class="border-bottom"></div>
+                    </li>
+                    <li>
+                        <a class="poppins-font-regular">About</a>
+                        <div class="border-bottom"></div>
+                    </li>
+                    <li>
+                        <a class="poppins-font-regular">Contact</a>
+                        <div class="border-bottom"></div>
+                    </li>
+                </ul>
+            </nav>
+        </section>
     </header>
     <main>
         <section id="introduction-m" class="introduction-mobile">
-            <h1>Nelson Araujo</h1>
-            <p class="poppins-font-regular">Hello! and welcome to my website. I am a web developer and why not your future collaborator? Take some minutes to look at my works. And if you want to know more about me, do not hesitate contacting.</p>
-            <button class="main-btn full-width poppins-font-medium">
-                Start collaborating
-            </button>
+            <div class="content-introduction">
+                <h1>Nelson Araujo</h1>
+                <p class="poppins-font-regular">Hello! and welcome to my website. I am a web developer and why not your future collaborator? Take some minutes to look at my works. And if you want to know more about me, do not hesitate contacting.</p>
+                <button class="main-btn full-width poppins-font-medium">
+                    Start collaborating
+                </button>
+            </div>
+            <div class="deco-image full-width"></div>
         </section>
-        <div class="deco-image full-width"></div>
         <section id="works-m" class="works-mobile full-width">
             <h1>Projects</h1>
             <div class="main-works-container full-width">
@@ -239,7 +263,66 @@
                 </article>
             </div>
         </section>
+        <section id="form-m" class="form-mobile full-width">
+            <div class="header-image full-width"></div>
+            <div class="form-header">
+                <h1>Get Started</h1>
+                <p class="poppins-font-regular">If you are interested in hiring my services, fill out the following form and I will contact you as soon as possible.</p>
+            </div>
+            <form class="contact-form" action="https://formspree.io/f/mwkzgbvy" method="post">
+                <fieldset class="input-fieldset">
+                    <label for="full-name">Your name</label>
+                    <input type="text" name="full-name" id="full-name" placeholder="Full name" required maxlength="30" class="full-width poppins-font-regular">
+                </fieldset>
+                <fieldset class="input-fieldset">
+                    <label for="email">Your email</label>
+                    <input type="email" name="email" id="email" placeholder="example@example.com" required class="full-width poppins-font-regular">
+                </fieldset>
+                <textarea class="textarea full-width" required type="textarea" id="message" name="message" placeholder="Enter your message here..." maxlength="500"></textarea>
+                <button type="submit" class="main-btn full-width">Start Collaboration</button>
+            </form>
+        </section>
     </main>
+    <footer>
+        <section class="footer-m">
+            <button class="footer-btn poppins-font-medium">
+                <span>Get my Resume</span>
+                <div class="btn-footer-icon"></div>
+            </button>
+            <ul>
+                <li>
+                    <a href="https://stackoverflow.com">
+                        <img src="./assets/ic_stackoverflow.svg" alt="Stack overflow icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.github.com">
+                        <img src="./assets/ic_github.svg" alt="GitHub icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com">
+                        <img src="./assets/ic_twitter.svg" alt="Twitter icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com">
+                        <img src="./assets/ic_linkedin.svg" alt="Linkedin icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://medium.com">
+                        <img src="./assets/ic_medium.svg" alt="Medium icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.angellist.com">
+                        <img src="./assets/ic_angellist.svg" alt="Angelist icon">
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </footer>
     <script src="./index.js"></script>
 </body>
 </html>
