@@ -415,6 +415,7 @@ p#contact-form-text {
   display: flex;
   flex-direction: column;
   margin-bottom: 64px;
+  background-color: #f9f9fA;
 }
 
 .form-header,
@@ -468,4 +469,62 @@ textarea:focus-visible {
 
 input:focus-visible {
   outline: none;
+}
+
+section.footer-m {
+  background-color: #1a2236;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 16px;
+}
+
+.footer-m ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-left: 0;
+}
+
+.footer-m img {
+  width: 25px;
+  height: 25px;
+}
+
+.footer-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 180px;
+  gap: 8px;
+  color: #92dcdc;
+  background: #1a2236;
+  border: 1px solid #1a2236;
+  transition: all 250ms ease-in-out;
+  height: 44px;
+  font-size: 16px;
+}
+
+.footer-btn:active {
+  background: white;
+  color: #1a2236;
+  border: 1px solid #1a2236;
+}
+
+.btn-footer-icon {
+  width: 25px;
+  height: 25px;
+  background: url('./assets/ic_link_teal.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 250ms ease-in-out;
+}
+
+.footer-btn:active .btn-footer-icon {
+  background: url('./assets/ic_link_teal_active.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
