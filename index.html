@@ -42,19 +42,19 @@
             <nav id='menu-container'  class='full-width' aria-controls="open-menu-btn">
                 <ul>
                     <li>
-                        <a class="poppins-font-regular">Hello</a>
+                        <a class="poppins-font-regular" href="#introduction-m">Hello</a>
                         <div class="border-bottom"></div>
                     </li>
                     <li>
-                        <a class="poppins-font-regular">Portfolio</a>
+                        <a class="poppins-font-regular" href="#works-m">Portfolio</a>
                         <div class="border-bottom"></div>
                     </li>
                     <li>
-                        <a class="poppins-font-regular">About</a>
+                        <a class="poppins-font-regular" href="#about-m">About</a>
                         <div class="border-bottom"></div>
                     </li>
                     <li>
-                        <a class="poppins-font-regular">Contact</a>
+                        <a class="poppins-font-regular" href="#form-m">Contact</a>
                         <div class="border-bottom"></div>
                     </li>
                 </ul>
@@ -69,6 +69,7 @@
                 <button class="main-btn full-width poppins-font-medium">
                     Start collaborating
                 </button>
+                <div class="image-dots"></div>
             </div>
             <div class="deco-image full-width"></div>
         </section>
@@ -266,7 +267,7 @@
         <section id="form-m" class="form-mobile full-width">
             <div class="header-image full-width"></div>
             <div class="form-header">
-                <h1>Get Started</h1>
+                <h1>Get started</h1>
                 <p class="poppins-font-regular">If you are interested in hiring my services, fill out the following form and I will contact you as soon as possible.</p>
             </div>
             <form class="contact-form" action="https://formspree.io/f/mwkzgbvy" method="post">
@@ -278,9 +279,14 @@
                     <label for="email">Your email</label>
                     <input type="email" name="email" id="email" placeholder="example@example.com" required class="full-width poppins-font-regular">
                 </fieldset>
-                <textarea class="textarea full-width" required type="textarea" id="message" name="message" placeholder="Enter your message here..." maxlength="500"></textarea>
+                <div class="textarea full-width">
+                    <label class="text-a-label" for="textarea">Message</label>
+                    <textarea class="textarea full-width" required type="textarea" id="message" name="message" placeholder="Enter your message here..." maxlength="500">
+                    </textarea>
+                </div>
                 <button type="submit" class="main-btn full-width">Start Collaboration</button>
             </form>
+            <div class="bottom-form-image"></div>
         </section>
     </main>
     <footer>

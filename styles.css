@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 @font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/fonts/PlayfairDisplay-Regular.ttf');
+}
+@font-face {
   font-family: 'Poppins';
   src: url('./assets/fonts/Poppins-Regular.ttf');
 }
@@ -23,6 +27,10 @@
 @font-face {
   font-family: 'Poppins-ExtraBold';
   src: url('./assets/fonts/Poppins-ExtraBold.ttf');
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -159,6 +167,8 @@ body {
 
 #menu-container li a {
   font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: black;
 }
 
 .landing-header {
@@ -185,6 +195,7 @@ body {
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 60px;
+  color: #1a2236;
   font-weight: 400;
   line-height: 50px;
   text-align: left;
@@ -466,15 +477,25 @@ p#contact-form-text {
   background: white;
 }
 
-textarea#message {
-  resize: none;
+.textarea {
+  display: flex;
   height: 112px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.textarea label {
+  display: none;
+}
+
+#message {
+  resize: none;
+  height: 100%;
   border-radius: 4px;
   padding: 15px 16px;
   box-sizing: border-box;
   border-color: #dfdfe0;
   font-family: 'Poppins', sans-serif;
-  margin-bottom: 20px;
   transition: all 250ms ease-in-out;
 }
 
@@ -493,7 +514,7 @@ input {
   border: 1px solid #1a2236;
 }
 
-textarea:focus-visible {
+#message:focus-visible {
   outline: none;
   border: 1px solid #1a2236;
 }
@@ -596,5 +617,127 @@ section.footer-m {
 
   #menu-container li:hover{
     box-shadow: 0 2px 0 0 black;
+  }
+
+  .introduction-mobile {
+    flex-direction: row;
+    height: 877px;
+    margin-bottom: 60px;
+  }
+
+  .content-introduction {
+    flex: 1 0 50%;
+    padding: 0 90px 0 160px;
+    position: relative;
+  }
+
+  .deco-image.full-width {
+    flex: 1 0 50%;
+    background: url('./assets/image-geometry_1.svg');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  button.main-btn.full-width {
+    max-width: 254px;
+    height: 70px;
+  } 
+
+  h1 {
+    font-size: 110px;
+    line-height: 110px;
+    margin-top: 0;
+  }
+
+  .image-dots{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 175px;
+    width: 175px;
+    background: url('./assets/image_dots.svg');
+  }
+
+  .form-header, .contact-form {
+    padding: 0 18px;
+    max-width: 548px;
+    width: 100%;
+  }
+
+  section#form-m {
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 132px 0;
+    height: 950px;
+  }
+
+  form.contact-form {
+    position: relative;
+    display: grid;
+    grid-template-rows: 96px 1fr 96px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "fs1 fs2"
+        "txt txt"
+        "btn btn";
+  }
+
+  fieldset.input-fieldset {
+    grid-area: fs2;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 18px 20px;
+    margin: 0;
+    margin-left: 19px;
+    position: relative;
+  }
+
+  fieldset.input-fieldset:first-child {
+    grid-area: fs1;
+    margin-right: 19px;
+    margin-left: 0;
+  }
+
+  .textarea {
+    grid-area: txt;
+    position: relative;
+  }
+
+  .textarea label{
+    display: block;
+  }
+
+  .contact-form button {
+    grid-area: btn;
+    justify-self: center;
+  }
+
+  .contact-form label {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+  }
+  
+  .header-image {
+    background: url('./assets/image-geometry_6.svg');
+    height: 350px;
+    width: 263px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .bottom-form-image {
+    background: url('./assets/image-geometry_7.svg');
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    bottom: 0;
+    right: 0;
   }
 }
