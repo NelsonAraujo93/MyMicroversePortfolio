@@ -281,7 +281,7 @@ p {
 .card-categories-container {
   display: flex;
   height: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   list-style: none;
   gap: 10px;
   justify-content: flex-start;
@@ -788,6 +788,203 @@ section.footer-m {
     bottom: 0;
     right: 0;
   }
+
+  /*Works Desktop*/
+  #works-m {
+    display: none;
+  }
+
+  #works-d {
+    display: block;
+    margin-bottom: 104px;
+  }
+
+  .works-top-container {
+    display: flex;
+    height: 558px;
+  }
+
+  .works-title-container h1 {
+    transform: translate(0,-50%) rotate(-90deg);
+    width: auto;
+    position: absolute;
+    top: 190px;
+    left: -126px;
+  }
+
+  .works-dots {
+    background: url(./assets/image_dots.svg);
+    width: 160px;
+    height: 160px;
+  }
+
+  .works-title-container {
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 60px;
+    justify-content: flex-end;
+    flex: 1 0 33.33%;
+    position: relative;
+  }
+
+  .main.work-card {
+    width: 66.66%;
+    height: 558px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+  }
+
+  .bot-top.detail-container{
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    transition: all 700ms ease-in-out;
+    padding: 60px;
+    box-sizing: border-box;
+    height: 71%;
+    gap: 20px;
+  }
+
+  .work-card:hover .bot-top.detail-container{
+    bottom: 0%;
+  }
+
+  .card-title {
+    font-size: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 46px;
+    line-height: 40px;
+  }
+
+  .card-category {
+    font-size: 14px;
+    padding: 18px 20px;
+  }
+
+  button.card-btn {
+    width: 212px;
+    height: 51px;
+  }
+
+  .btn-label {
+    font-size: 18px;
+    color: #fff;
+    transition: all 250ms ease-in-out;
+  }
+
+  .works-mid-container {
+    display: flex;
+    background: url('./assets/works-bg.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .mid-left-container {
+    display: flex;
+    flex: 1 0 50%;
+    flex-direction: column;
+    padding-top: 79px;
+    padding-right: 0;
+    box-sizing: border-box;
+    padding-bottom: 270px;
+  }
+
+  .w-top-container {
+    display: flex;
+    height: 350px;
+  }
+
+  .mid-rigth-container {
+    display: flex;
+    flex: 1 0 50%;
+    flex-direction: column;
+  }
+
+  
+  .little.work-card {
+    width: 47%;
+    min-width: 380px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    cursor: pointer;
+    overflow: hidden;
+    height: 270px;
+    align-self: flex-start;
+  }
+
+  .mid-rigth-container .little.work-card{
+    width: 47%;
+    align-self: flex-end;
+  }
+
+  .bot-top.detail-container{
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    transition: all 700ms ease-in-out;
+    padding: 60px 30px;
+    box-sizing: border-box;
+    height: 71%;
+  }
+
+  .little .work-card:hover .bot-top.detail-container{
+    bottom: 0%;
+  }
+
+  .little .card-title {
+    font-size: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 30px;
+    margin: 0;
+    height: 36px;
+  }
+
+  .little .bot-top.detail-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .middle-deco-image {
+    width: 53%;
+    height: auto;
+    background-size: cover;
+  }
+
+  .w-bottom-container {
+    display: flex;
+    height: 465px;
+  }
+
+  .medium.work-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    flex: 1 0 auto;
+  }
+
+  .vertical-image {
+    height: 100%;
+    width: 18%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+
+  .blank {
+    height: 275px;
+    width: 100%;
+  }
+
 }
 
 @media screen and (min-width:1060px) {
@@ -828,5 +1025,42 @@ section.footer-m {
   .knowledge-item {
     flex: 1 0 25%;
     padding: 50px;
+  }
+
+  .little .card-title {
+    font-size: 40px;
+  }
+
+  .card-category {
+    font-size: 20px;
+  }
+
+  .mid-left-container {
+    flex: 1 0 67.5%;
+    padding-right: 11.9%;
+  }
+
+  .mid-rigth-container {
+    flex: 1 0 32.5%;
+  }
+
+  .mid-rigth-container .little.work-card:last-child {
+    align-self: flex-start;
+  } 
+
+  .bot-top.detail-container{
+    padding: 60px;
+  }
+
+  .card-title {
+    font-size: 60px;
+  }
+
+  .card-category {
+    font-size: 16px;
+  }
+
+  .works-title-container h1 {
+    left: 0;
   }
 }
