@@ -873,7 +873,6 @@ section.footer-m {
 
   .bot-top.detail-container {
     position: absolute;
-    bottom: -100%;
     width: 100%;
     transition: all 700ms ease-in-out;
     padding: 60px 30px;
@@ -889,7 +888,8 @@ section.footer-m {
   }
 
   .work-card:hover .bot-top.detail-container {
-    bottom: 0%;
+    animation-name: slideUp;
+    animation-duration: 700ms;
   }
 
   .card-title {
