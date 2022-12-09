@@ -943,7 +943,7 @@ section.footer-m {
     white-space: nowrap;
     line-height: 30px;
     margin: 0;
-    height: 36px;
+    height: 40px;
   }
 
   .middle-deco-image {
@@ -1029,6 +1029,7 @@ section.footer-m {
 
   .card-title {
     font-size: 60px;
+    height: 60px;
   }
 
   .little .card-title {
