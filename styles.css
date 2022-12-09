@@ -32,21 +32,26 @@
 
 @keyframes slideUp {
   0%{
+    bottom: -100%;
 
   }
   25%{
+    bottom: -50%;
 
   }
   50%{
+    bottom: -25%;
 
   }
   100%{
+    bottom: 0%;
 
   }
 }
 
 @keyframes slideDown {
   0%{
+
 
   }
   25%{
@@ -878,6 +883,7 @@ section.footer-m {
     padding: 60px 30px;
     box-sizing: border-box;
     height: 71%;
+    bottom: -100%;
   }
 
   .little .bot-top.detail-container {
