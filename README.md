@@ -5,7 +5,7 @@
   <img src="https://vagosstudios.com/assets/images/logo-navbar.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>My first mobile portfolio</b></h3>
+  <h3><b>My Web Portfolio</b></h3>
 
 </div>
 
@@ -27,11 +27,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Hello world Microver-Nelson <a name="about-project"></a>
+# 📖 Web Portfolio-Nelson <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
-**Hello world Microverse-Nelson** is an activity created in the Module 1: Second day of my Microverse classes
+> Description
+This project is being developed to learn the importance of UX using Web Responsive, good HTML practices and CSS to create a high quality portfolio web-site.
+**Web Portfolio--Nelson** is an activity created in the Module 1: Second day of my Microverse classes
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -60,16 +60,9 @@ In order to run this project you need: To clone the repo.
 
 ### Setup
 
-Clone this repository to your desired folder: https://github.com/NelsonAraujo93/MyMicroversePortfolio
+Clone this repository to your desired folder: 
+  git clone [git@github.com:myaccount/my-project.git](https://github.com/NelsonAraujo93/MyMicroversePortfolio)
 
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -77,7 +70,6 @@ Example commands:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
 
 👤 **Nelson Araujo**
 
@@ -90,6 +82,8 @@ Example commands:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **This will be tested by Microverse partners**
+- [ ] **Animations**
+- [ ] **Functions (JavaScript)**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
