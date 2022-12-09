@@ -30,6 +30,36 @@
   src: url('./assets/fonts/Poppins-ExtraBold.ttf');
 }
 
+@keyframes slideUp {
+  0%{
+
+  }
+  25%{
+
+  }
+  50%{
+
+  }
+  100%{
+
+  }
+}
+
+@keyframes slideDown {
+  0%{
+
+  }
+  25%{
+
+  }
+  50%{
+
+  }
+  100%{
+    
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
