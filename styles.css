@@ -896,6 +896,7 @@ section.footer-m {
   .work-card:hover .bot-top.detail-container {
     animation-name: slideUp;
     animation-duration: 700ms;
+    animation-fill-mode: forwards;
   }
 
   .card-title {
