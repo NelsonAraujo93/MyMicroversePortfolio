@@ -90,7 +90,7 @@ body {
   top: 0;
   left: 0;
   z-index: 2;
-  position: absolute;
+  position: fixed;
   display: none;
   flex-direction: column;
   justify-content: space-between;
