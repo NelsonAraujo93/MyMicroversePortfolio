@@ -31,10 +31,8 @@
 }
 
 @keyframes slideUp {
-  0% { bottom: -100%; }
-  25% { bottom: -50%; }
-  50% { bottom: -25%; }
-  100% { bottom: 0%; }
+  from { bottom: -100%; }
+  to { bottom: 0%; }
 }
 
 html {
@@ -866,9 +864,7 @@ section.footer-m {
   }
 
   .work-card:hover .bot-top.detail-container {
-    animation-name: slideUp;
-    animation-duration: 700ms;
-    animation-fill-mode: forwards;
+    animation: slideUp 700ms ease-in-out forwards;
   }
 
   .card-title {
