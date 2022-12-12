@@ -30,6 +30,11 @@
   src: url('./assets/fonts/Poppins-ExtraBold.ttf');
 }
 
+@keyframes slideUp {
+  from { bottom: -100%; }
+  to { bottom: 0%; }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -843,12 +848,12 @@ section.footer-m {
 
   .bot-top.detail-container {
     position: absolute;
-    bottom: -100%;
     width: 100%;
     transition: all 700ms ease-in-out;
     padding: 60px 30px;
     box-sizing: border-box;
     height: 71%;
+    bottom: -100%;
   }
 
   .little .bot-top.detail-container {
@@ -859,7 +864,7 @@ section.footer-m {
   }
 
   .work-card:hover .bot-top.detail-container {
-    bottom: 0%;
+    animation: slideUp 700ms ease-in-out forwards;
   }
 
   .card-title {
