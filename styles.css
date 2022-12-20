@@ -164,11 +164,15 @@ body {
 
 #menu-container ul {
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 #menu-container li {
   list-style: none;
   margin-bottom: 4px;
+  text-align: center;
 }
 
 #menu-container li a {
