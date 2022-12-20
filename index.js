@@ -9,7 +9,7 @@ const init = () => {
     openBtn.style.display = 'none';
   });
 
-  for(let i=0; i<menuItems.length; i++){
+  for (let i = 0; i < menuItems.length; i += 1) {
     menuItems[i].addEventListener('click', () => {
       menuContainer.style.display = 'none';
       openBtn.style.display = 'block';
