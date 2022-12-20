@@ -1,5 +1,5 @@
 const init = () => {
-  const menuItems = document.getElementsByClassName("menu-items");
+  const menuItems = document.getElementsByClassName('mobile-item');
   const openBtn = document.getElementById('open-menu-btn');
   const closeBtn = document.getElementById('close-menu-btn');
   const menuContainer = document.getElementById('menu-container');
@@ -9,10 +9,12 @@ const init = () => {
     openBtn.style.display = 'none';
   });
 
-  menuItems.addEventListener('click', () => {
-    menuContainer.style.display = 'none';
-    openBtn.style.display = 'block';
-  });
+  for(let i=0; i<menuItems.length; i++){
+    menuItems[i].addEventListener('click', () => {
+      menuContainer.style.display = 'none';
+      openBtn.style.display = 'block';
+    });
+  }
 
   closeBtn.addEventListener('click', () => {
     menuContainer.style.display = 'none';
