@@ -74,7 +74,7 @@ body {
   width: 100%;
 }
 
-.card-title.dark{
+.card-title.dark {
   color: #1a2236;
   height: 80px;
   line-height: 80px;
@@ -224,6 +224,12 @@ p {
   margin-bottom: 40px;
 }
 
+.btn-label {
+  font-size: 16px;
+  color: #fff;
+  transition: all 250ms ease-in-out;
+}
+
 .main-btn {
   height: 42px;
   background: #1a2236;
@@ -265,6 +271,21 @@ p {
   flex-direction: row-reverse;
 }
 
+.third-btn .btn-label {
+  font-size: 12px;
+  color: #1a2236;
+}
+
+.secondary-btn .btn-label {
+  font-size: 16px;
+  color: #1a2236;
+  transition: all 250ms ease-in-out;
+}
+
+.main-btn:hover .btn-label {
+  color: #1a2236;
+}
+
 .secondary-btn {
   height: 51px;
   width: 100%;
@@ -292,19 +313,8 @@ p {
   color: white;
 }
 
-.secondary-btn .btn-label {
-  font-size: 16px;
-  color: #1a2236;
-  transition: all 250ms ease-in-out;
-}
-
 .secondary-btn:hover .btn-label {
   color: white;
-}
-
-.third-btn .btn-label {
-  font-size: 12px;
-  color: #1a2236;
 }
 
 #works-d {
@@ -411,20 +421,6 @@ p {
 
 .card-btn:hover {
   background: white;
-  color: #1a2236;
-}
-
-.btn-label {
-  font-size: 16px;
-  color: #fff;
-  transition: all 250ms ease-in-out;
-}
-
-.main-btn .btn-label {
-  transition: all 250ms ease-in-out;
-}
-
-.main-btn:hover .btn-label {
   color: #1a2236;
 }
 
@@ -715,7 +711,8 @@ section.footer-m {
   background-size: cover;
 }
 
-/* Pop-up*/
+/* Pop-up */
+
 section#pop-up {
   width: 100%;
   height: 100%;
@@ -876,10 +873,15 @@ img.gallery-icon {
     box-shadow: 0 2px 0 0 #1a2236;
   }
 
+  .btn-label {
+    font-size: 18px;
+    color: #fff;
+    transition: all 250ms ease-in-out;
+  }
+
   .third-btn .btn-label {
     font-size: 16px;
   }
-  
 
   .introduction-mobile {
     flex-direction: row;
@@ -1140,12 +1142,6 @@ img.gallery-icon {
     height: 51px;
   }
 
-  .btn-label {
-    font-size: 18px;
-    color: #fff;
-    transition: all 250ms ease-in-out;
-  }
-
   .works-mid-container {
     display: flex;
     background: url('./assets/works-bg.svg');
@@ -1245,7 +1241,7 @@ img.gallery-icon {
     padding: 0 60px;
   }
 
-  /* Pop-up*/
+  /* Pop-up */
   section#pop-up {
     background: #1a2236;
     padding: 70px;

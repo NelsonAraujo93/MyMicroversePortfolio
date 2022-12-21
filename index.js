@@ -15,7 +15,7 @@ const worksArray = [
     technologies: ['Angular.js', 'MongoDB', 'Express.js', 'Node.js'],
     link_demo: 'https://vagosstudios.com',
     link_source: 'https://github.com/NelsonAraujo93/VagosWeb2',
-    image_alts: ['A guy using a laptop and some desk staff']
+    image_alts: ['A guy using a laptop and some desk staff'],
   },
   {
     name: 'Vagos studios web 3',
@@ -24,7 +24,7 @@ const worksArray = [
     technologies: ['Angular.js', 'MongoDB', 'Express.js', 'Node.js'],
     link_demo: 'https://vagosstudios.com',
     link_source: 'https://github.com/NelsonAraujo93/VagosWeb2',
-    image_alts: ['A guy using a laptop and some desk staff']
+    image_alts: ['A guy using a laptop and some desk staff'],
   },
   {
     name: 'Vagos studios web 4',
@@ -33,7 +33,7 @@ const worksArray = [
     technologies: ['Angular.js', 'MongoDB', 'Express.js', 'Node.js'],
     link_demo: 'https://vagosstudios.com',
     link_source: 'https://github.com/NelsonAraujo93/VagosWeb2',
-    image_alts: ['A guy using a laptop and some desk staff']
+    image_alts: ['A guy using a laptop and some desk staff'],
   },
   {
     name: 'Vagos studios web 5',
@@ -42,7 +42,7 @@ const worksArray = [
     technologies: ['Angular.js', 'MongoDB', 'Express.js', 'Node.js'],
     link_demo: 'https://vagosstudios.com',
     link_source: 'https://github.com/NelsonAraujo93/VagosWeb2',
-    image_alts: ['A guy using a laptop and some desk staff']
+    image_alts: ['A guy using a laptop and some desk staff'],
   },
   {
     name: 'Vagos studios web 6',
@@ -51,71 +51,9 @@ const worksArray = [
     technologies: ['Angular.js', 'MongoDB', 'Express.js', 'Node.js'],
     link_demo: 'https://vagosstudios.com',
     link_source: 'https://github.com/NelsonAraujo93/VagosWeb2',
-    image_alts: ['A guy using a laptop and some desk staff']
+    image_alts: ['A guy using a laptop and some desk staff'],
   },
 ];
-
-const dynamicWorksItems = (worksArray, parent, className) => {
-  worksArray.map((item, i) => {
-    const data = item;
-    const itemDom = document.createElement('article');
-    const imageContainer = document.createElement('div');
-    const detailContainer = document.createElement('div');
-    const title = document.createElement('h3');
-    const techs = document.createElement('ul');
-    const button = document.createElement('button');
-
-    if (className !== '') {
-      detailContainer.classList.add('bot-top', 'detail-container');
-      itemDom.className = `${className} work-card`;
-      title.classList.add('card-title', 'poppins-font-semibold');
-    } else {
-      detailContainer.className = 'detail-container';
-      itemDom.className = 'work-card';
-      title.classList.add('card-title', 'poppins-font-ligth');
-    }
-    
-    title.innerHTML = item.name;
-    imageContainer.classList.add('image-container', 'full-width');
-    imageContainer.innerHTML = `<img class="full-width" src=" ${item.featured_images[0]}" alt="${item.image_alts[0]}">`;
-
-    techs.classList.add('card-categories-container', 'full-width');
-    for (let i = 0; i < item.technologies.length; i += 1) {
-      const techsItem = document.createElement('li');
-      techsItem.classList.add('card-category', 'poppins-font-ligth');
-      techsItem.innerHTML = item.technologies[i];
-      techs.appendChild(techsItem);
-    }
-
-    button.className = 'card-btn';
-    button.innerHTML = '<span class="btn-label poppins-font-medium">See this project</span><div class="btn-arrow-icon"></div>';
-    button.addEventListener('click', (e) => {
-      popUp(data, i);
-    });
-
-    detailContainer.appendChild(title);
-    detailContainer.appendChild(techs);
-    detailContainer.appendChild(button);
-
-    itemDom.appendChild(imageContainer);
-    itemDom.appendChild(detailContainer);
-
-    return parent.appendChild(itemDom);
-  });
-};
-
-const dynamicWorksItemsDesktop = (parent1, parent2, parent3, worksArray) => {
-  const worksArrayDynamic = [...worksArray];
-  const array1 = worksArrayDynamic.splice(0, 1);
-  const array2 = worksArrayDynamic.splice(0, 1);
-  const array3 = worksArrayDynamic.splice(0, 1);
-  const array4 = worksArrayDynamic.splice(0, 3);
-
-  dynamicWorksItems(array1, parent1, 'main');
-  dynamicWorksItems(array2, parent2, 'little');
-  dynamicWorksItems(array3, parent2, 'medium');
-  dynamicWorksItems(array4, parent3, 'little');
-};
 
 const popUp = (item, position) => {
   const popUpContainer = document.createElement('section');
@@ -138,7 +76,6 @@ const popUp = (item, position) => {
   const prevNavBtn = document.createElement('button');
   const nextNavBtn = document.createElement('button');
 
-
   popUpContainer.id = 'pop-up';
   popUpContent.classList.add('pop-up-content', 'full-width');
   popUpHeader.classList.add('pop-up-header', 'full-width');
@@ -160,16 +97,15 @@ const popUp = (item, position) => {
     techs.appendChild(techsItem);
   }
 
-  imageGallery.className='image-gallery-container';
-  selectedImage.className='selected-image-container';
-  selectedImage.innerHTML=`<img class="full-width" src=" ${item.featured_images[0]}" alt="${item.image_alts[0]}">`;
-  
-  if (item.featured_images.length>1) {
-    galleryCarousel.className='gallery';
+  imageGallery.className = 'image-gallery-container';
+  selectedImage.className = 'selected-image-container';
+  selectedImage.innerHTML = `<img class="full-width" src=" ${item.featured_images[0]}" alt="${item.image_alts[0]}">`;
+  if (item.featured_images.length > 1) {
+    galleryCarousel.className = 'gallery';
     item.featured_images.map((img, i) => {
       const galleryItem = document.createElement('li');
       galleryItem.className = 'gallery-item-container';
-      galleryItem.innerHTML = `<img class="gallery-image" src=" ${img}" alt="${item.image_alts[i]}">`
+      galleryItem.innerHTML = `<img class="gallery-image" src=" ${img}" alt="${item.image_alts[i]}">`;
       return galleryCarousel.appendChild(galleryItem);
     });
     galleryPrevBtn.classList.add('gallery-control', 'prev');
@@ -197,18 +133,15 @@ const popUp = (item, position) => {
   repoBtn.className = 'secondary-btn';
   liveBtn.innerHTML = '<span class="btn-label poppins-font-medium">See live</span><div class="btn-live-icon"></div>';
   repoBtn.innerHTML = '<span class="btn-label poppins-font-medium">See source</span><div class="btn-git-icon"></div>';
-  
   liveBtn.addEventListener('click', () => {
-    window.open(item.link_demo, "_blank");
+    window.open(item.link_demo, '_blank');
   });
- 
   repoBtn.addEventListener('click', () => {
-    window.open(item.link_source, "_blank");
+    window.open(item.link_source, '_blank');
   });
- 
   navigation.className = 'navigation-container';
 
-  if(position === 0){
+  if (position === 0) {
     nextNavBtn.className = 'third-btn';
     prevNavBtn.classList.add('third-btn', 'reverse', 'disabled');
     prevNavBtn.innerHTML = '<span class="btn-label poppins-font-regular">Previous project</span><div class="btn-arrow-reverse-icon"></div>';
@@ -240,7 +173,6 @@ const popUp = (item, position) => {
       popUp(worksArray[position + 1], position + 1);
     });
   }
- 
   popUpHeader.appendChild(title);
   popUpHeader.appendChild(cancelBtn);
 
@@ -263,6 +195,62 @@ const popUp = (item, position) => {
   document.body.appendChild(popUpContainer);
 };
 
+const dynamicWorksItems = (worksArray, parent, className) => {
+  worksArray.map((item, i) => {
+    const data = item;
+    const itemDom = document.createElement('article');
+    const imageContainer = document.createElement('div');
+    const detailContainer = document.createElement('div');
+    const title = document.createElement('h3');
+    const techs = document.createElement('ul');
+    const button = document.createElement('button');
+
+    if (className !== '') {
+      detailContainer.classList.add('bot-top', 'detail-container');
+      itemDom.className = `${className} work-card`;
+      title.classList.add('card-title', 'poppins-font-semibold');
+    } else {
+      detailContainer.className = 'detail-container';
+      itemDom.className = 'work-card';
+      title.classList.add('card-title', 'poppins-font-ligth');
+    }
+    title.innerHTML = item.name;
+    imageContainer.classList.add('image-container', 'full-width');
+    imageContainer.innerHTML = `<img class="full-width" src=" ${item.featured_images[0]}" alt="${item.image_alts[0]}">`;
+    techs.classList.add('card-categories-container', 'full-width');
+    for (let i = 0; i < item.technologies.length; i += 1) {
+      const techsItem = document.createElement('li');
+      techsItem.classList.add('card-category', 'poppins-font-ligth');
+      techsItem.innerHTML = item.technologies[i];
+      techs.appendChild(techsItem);
+    }
+    button.className = 'card-btn';
+    button.innerHTML = '<span class="btn-label poppins-font-medium">See this project</span><div class="btn-arrow-icon"></div>';
+    button.addEventListener('click', () => {
+      popUp(data, i);
+    });
+    detailContainer.appendChild(title);
+    detailContainer.appendChild(techs);
+    detailContainer.appendChild(button);
+    itemDom.appendChild(imageContainer);
+    itemDom.appendChild(detailContainer);
+    return parent.appendChild(itemDom);
+  });
+};
+
+const dynamicWorksItemsDesktop = (parent1, parent2, parent3, worksArray) => {
+  const worksArrayDynamic = [...worksArray];
+  const array1 = worksArrayDynamic.splice(0, 1);
+  const array2 = worksArrayDynamic.splice(0, 1);
+  const array3 = worksArrayDynamic.splice(0, 1);
+  const array4 = worksArrayDynamic.splice(0, 3);
+
+  dynamicWorksItems(array1, parent1, 'main');
+  dynamicWorksItems(array2, parent2, 'little');
+  dynamicWorksItems(array3, parent2, 'medium');
+  dynamicWorksItems(array4, parent3, 'little');
+};
+
 const init = () => {
   const menuItems = document.getElementsByClassName('mobile-item');
   const openBtn = document.getElementById('open-menu-btn');
@@ -272,7 +260,6 @@ const init = () => {
   const worksDesk = document.getElementById('works-d-top');
   const worksDeskLeft = document.getElementById('works-d-left');
   const worksDeskRigth = document.getElementById('works-d-rigth');
-
 
   openBtn.addEventListener('click', () => {
     menuContainer.style.display = 'flex';
