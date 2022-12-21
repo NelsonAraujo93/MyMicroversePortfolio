@@ -197,7 +197,11 @@ const popUp = (item, position) => {
   repoBtn.className = 'secondary-btn';
   liveBtn.innerHTML = '<span class="btn-label poppins-font-medium">See live</span><div class="btn-live-icon"></div>';
   repoBtn.innerHTML = '<span class="btn-label poppins-font-medium">See source</span><div class="btn-git-icon"></div>';
-
+  
+  liveBtn.addEventListener('click', () => {
+    window.open(item.link_demo, "_blank");
+  });
+ 
   navigation.className = 'navigation-container';
 
   if(position === 0){
