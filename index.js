@@ -149,7 +149,7 @@ const popUp = (item, position) => {
   cancelBtn.className = 'menu-btn';
   cancelBtn.innerHTML = '<img src="./assets/Union.svg" alt="Cancel icon">';
   cancelBtn.addEventListener('click', () => {
-    popUp.remove();
+    popUpContainer.remove();
   });
 
   techs.classList.add('card-categories-container', 'full-width');
@@ -198,7 +198,7 @@ const popUp = (item, position) => {
   liveBtn.innerHTML = '<span class="btn-label poppins-font-medium">See live</span><div class="btn-live-icon"></div>';
   repoBtn.innerHTML = '<span class="btn-label poppins-font-medium">See source</span><div class="btn-git-icon"></div>';
 
-  navigation.className ='navigation-container';
+  navigation.className = 'navigation-container';
 
   if(position === 0){
     nextNavBtn.className = 'third-btn';
@@ -286,8 +286,5 @@ const init = () => {
   dynamicWorksItems(worksArray, worksMobile);
   dynamicWorksItemsDesktop(worksDesk, worksDeskLeft, worksDeskRigth, worksArray);
 };
-
-//  abstraer funcion dentro de la que crea items para poder mandarle la subclase
-//  solucion para el blank
 
 init();
