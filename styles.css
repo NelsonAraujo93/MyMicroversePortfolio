@@ -243,6 +243,10 @@ p {
   color: black;
 }
 
+#works-d {
+  display: none;
+}
+
 .works-mobile {
   box-sizing: border-box;
 }
