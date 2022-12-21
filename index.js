@@ -202,6 +202,10 @@ const popUp = (item, position) => {
     window.open(item.link_demo, "_blank");
   });
  
+  repoBtn.addEventListener('click', () => {
+    window.open(item.link_source, "_blank");
+  });
+ 
   navigation.className = 'navigation-container';
 
   if(position === 0){
