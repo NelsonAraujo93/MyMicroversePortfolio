@@ -56,7 +56,7 @@ const worksArray = [
 ];
 
 const dynamicWorksItems = (worksArray, parent, className) => {
-  worksArray.map((item) => {
+  worksArray.map((item, i) => {
     const data = item;
     const itemDom = document.createElement('article');
     const imageContainer = document.createElement('div');
@@ -90,7 +90,7 @@ const dynamicWorksItems = (worksArray, parent, className) => {
     button.className = 'card-btn';
     button.innerHTML = '<span class="btn-label poppins-font-medium">See this project</span><div class="btn-arrow-icon"></div>';
     button.addEventListener('click', (e) => {
-      popUp(data);
+      popUp(data, i);
     });
 
     detailContainer.appendChild(title);
@@ -105,10 +105,11 @@ const dynamicWorksItems = (worksArray, parent, className) => {
 };
 
 const dynamicWorksItemsDesktop = (parent1, parent2, parent3, worksArray) => {
-  const array1 = worksArray.splice(0, 1);
-  const array2 = worksArray.splice(0, 1);
-  const array3 = worksArray.splice(0, 1);
-  const array4 = worksArray.splice(0, 3);
+  const worksArrayDynamic = [...worksArray];
+  const array1 = worksArrayDynamic.splice(0, 1);
+  const array2 = worksArrayDynamic.splice(0, 1);
+  const array3 = worksArrayDynamic.splice(0, 1);
+  const array4 = worksArrayDynamic.splice(0, 3);
 
   dynamicWorksItems(array1, parent1, 'main');
   dynamicWorksItems(array2, parent2, 'little');
@@ -116,8 +117,8 @@ const dynamicWorksItemsDesktop = (parent1, parent2, parent3, worksArray) => {
   dynamicWorksItems(array4, parent3, 'little');
 };
 
-const popUp = (item) => {
-  const popUp = document.createElement('section');
+const popUp = (item, position) => {
+  const popUpContainer = document.createElement('section');
   const popUpContent = document.createElement('article');
   const popUpHeader = document.createElement('div');
   const title = document.createElement('h3');
@@ -138,7 +139,7 @@ const popUp = (item) => {
   const nextNavBtn = document.createElement('button');
 
 
-  popUp.id = 'pop-up';
+  popUpContainer.id = 'pop-up';
   popUpContent.classList.add('pop-up-content', 'full-width');
   popUpHeader.classList.add('pop-up-header', 'full-width');
 
@@ -199,16 +200,39 @@ const popUp = (item) => {
 
   navigation.className ='navigation-container';
 
-  nextNavBtn.className = 'third-btn';
-  prevNavBtn.classList.add('third-btn', 'reverse');
-  prevNavBtn.innerHTML = '<span class="btn-label poppins-font-regular">Previous project</span><div class="btn-arrow-reverse-icon"></div>';
-  nextNavBtn.innerHTML = '<span class="btn-label poppins-font-regular">Next project</span><div class="btn-arrow-icon-black"></div>';
-
-/**<button class="main-btn full-width">
-          <span class="btn-label poppins-font-medium">Get my CV</span>
-          <div class="btn-download-icon"></div>
-        </button> */
-
+  if(position === 0){
+    nextNavBtn.className = 'third-btn';
+    prevNavBtn.classList.add('third-btn', 'reverse', 'disabled');
+    prevNavBtn.innerHTML = '<span class="btn-label poppins-font-regular">Previous project</span><div class="btn-arrow-reverse-icon"></div>';
+    nextNavBtn.innerHTML = '<span class="btn-label poppins-font-regular">Next project</span><div class="btn-arrow-icon-black"></div>';
+    nextNavBtn.addEventListener('click', () => {
+      popUpContainer.remove();
+      popUp(worksArray[position + 1], position + 1);
+    });
+  } else if (position + 1 === worksArray.length) {
+    nextNavBtn.classList.add('third-btn', 'disabled');
+    prevNavBtn.classList.add('third-btn', 'reverse');
+    prevNavBtn.innerHTML = '<span class="btn-label poppins-font-regular">Previous project</span><div class="btn-arrow-reverse-icon"></div>';
+    nextNavBtn.innerHTML = '<span class="btn-label poppins-font-regular">Next project</span><div class="btn-arrow-icon-black"></div>';
+    prevNavBtn.addEventListener('click', () => {
+      popUpContainer.remove();
+      popUp(worksArray[position - 1], position - 1);
+    });
+  } else {
+    nextNavBtn.className = 'third-btn';
+    prevNavBtn.classList.add('third-btn', 'reverse');
+    prevNavBtn.innerHTML = '<span class="btn-label poppins-font-regular">Previous project</span><div class="btn-arrow-reverse-icon"></div>';
+    nextNavBtn.innerHTML = '<span class="btn-label poppins-font-regular">Next project</span><div class="btn-arrow-icon-black"></div>';
+    prevNavBtn.addEventListener('click', () => {
+      popUpContainer.remove();
+      popUp(worksArray[position - 1], position - 1);
+    });
+    nextNavBtn.addEventListener('click', () => {
+      popUpContainer.remove();
+      popUp(worksArray[position + 1], position + 1);
+    });
+  }
+ 
   popUpHeader.appendChild(title);
   popUpHeader.appendChild(cancelBtn);
 
@@ -227,8 +251,8 @@ const popUp = (item) => {
   popUpContent.appendChild(imageGallery);
   popUpContent.appendChild(bottomContainer);
 
-  popUp.appendChild(popUpContent);
-  document.body.appendChild(popUp);
+  popUpContainer.appendChild(popUpContent);
+  document.body.appendChild(popUpContainer);
 };
 
 const init = () => {

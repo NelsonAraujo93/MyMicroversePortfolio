@@ -344,6 +344,15 @@ p {
   backdrop-filter: blur(0.5px);
   padding: 20px;
   box-sizing: border-box;
+  gap: 10px;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.third-btn.disabled {
+  opacity: 0;
 }
 
 .card-title {
