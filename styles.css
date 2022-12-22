@@ -205,7 +205,7 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
-  align-items: space-between;
+  align-items: flex-start;
 }
 
 h1 {
