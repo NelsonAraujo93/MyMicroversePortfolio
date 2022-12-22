@@ -266,10 +266,7 @@ const getStorageData = (nameInput, emailInput, messageInput) => {
   }
 };
 
-const setLocalStorage = (nameInput, emailInput, messageInput) => {
-  userData.name = nameInput.value;
-  userData.email = emailInput.value;
-  userData.message = messageInput.value;
+const setLocalStorage = () => {
   window.localStorage.setItem('user', JSON.stringify(userData));
 };
 
@@ -303,7 +300,20 @@ const init = () => {
       email.reportValidity();
       emailValidation = true;
     }
+    userData.email = event.currentTarget.value;
+    setLocalStorage();
   });
+
+  name.addEventListener('input', (event) => {
+    userData.name = event.currentTarget.value;
+    setLocalStorage();
+  });
+
+  message.addEventListener('input', (event) => {
+    userData.message = event.currentTarget.value;
+    setLocalStorage();
+  });
+
   form.addEventListener('submit', (event) => {
     if (emailValidation) {
       form.submit();
