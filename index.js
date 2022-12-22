@@ -283,7 +283,7 @@ const init = () => {
   form.addEventListener('submit', (event) => {
     if (emailValidation) {
       form.submit();
-    }else {
+    } else {
       event.preventDefault();
     }
   });
