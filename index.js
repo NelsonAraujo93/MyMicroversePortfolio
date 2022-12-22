@@ -251,6 +251,12 @@ const dynamicWorksItemsDesktop = (parent1, parent2, parent3, worksArray) => {
   dynamicWorksItems(array4, parent3, 'little');
 };
 
+var userData = {
+  name:'',
+  email:'',
+  message:''
+}
+
 const getStorageData = (nameInput, emailInput, messageInput) => {
   if(window.localStorage.user){
     userData = JSON.parse(window.localStorage.user);
@@ -278,10 +284,12 @@ const init = () => {
   const worksDeskRigth = document.getElementById('works-d-rigth');
   const form = document.getElementById('main-form');
   const email = document.getElementById('email');
+  const name = document.getElementById('full-name');
+  const message = document.getElementById('message');
   let emailValidation = false;
 
   email.addEventListener('input', (event) => {
-    const lowerCase = event.currentTarget.value.toLowerCase(); 
+    let lowerCase = event.currentTarget.value.toLowerCase(); 
     if (email.validity.typeMismatch) {
       email.setCustomValidity('This must be an email addres (example@exmaple.com)');
       email.reportValidity();
@@ -296,9 +304,11 @@ const init = () => {
       emailValidation = true;
     }
   });
-  form.addEventListener('submit', function (event) {
+
+  form.addEventListener("submit", function (event) {
     event.preventDefault();
     if (emailValidation) {
+      setLocalStorage(name, email, message);
       form.submit();
     } 
   });
@@ -320,6 +330,7 @@ const init = () => {
     openBtn.style.display = 'block';
   });
 
+  getStorageData(name, email, message);
   dynamicWorksItems(worksArray, worksMobile);
   dynamicWorksItemsDesktop(worksDesk, worksDeskLeft, worksDeskRigth, worksArray);
 };
