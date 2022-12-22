@@ -251,6 +251,15 @@ const dynamicWorksItemsDesktop = (parent1, parent2, parent3, worksArray) => {
   dynamicWorksItems(array4, parent3, 'little');
 };
 
+const getStorageData = (nameInput, emailInput, messageInput) => {
+  if(window.localStorage.user){
+    userData = JSON.parse(window.localStorage.user);
+    nameInput.value = userData.name;
+    emailInput.value = userData.email;
+    messageInput.value = userData.message;
+  }
+}
+
 const init = () => {
   const menuItems = document.getElementsByClassName('mobile-item');
   const openBtn = document.getElementById('open-menu-btn');
