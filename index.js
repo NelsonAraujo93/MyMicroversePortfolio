@@ -257,22 +257,6 @@ var userData = {
   message:''
 }
 
-const getStorageData = (nameInput, emailInput, messageInput) => {
-  if(window.localStorage.user){
-    userData = JSON.parse(window.localStorage.user);
-    nameInput.value = userData.name;
-    emailInput.value = userData.email;
-    messageInput.value = userData.message;
-  }
-}
-
-const setLocalStorage = (nameInput, emailInput, messageInput) => {
-  userData.name = nameInput.value;
-  userData.email = emailInput.value;
-  userData.message = messageInput.value;
-  window.localStorage.setItem('user', JSON.stringify(userData));
-}
-
 const init = () => {
   const menuItems = document.getElementsByClassName('mobile-item');
   const openBtn = document.getElementById('open-menu-btn');
