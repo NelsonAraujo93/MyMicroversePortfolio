@@ -205,7 +205,7 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
-  align-self: space-between;
+  align-items: flex-start;
 }
 
 h1 {
@@ -581,7 +581,6 @@ h2#contact-form-haeder {
 
 p#contact-form-text {
   text-align: center;
-  overflow: aling;
   font-size: 20px;
   font-family: 'Poppins', sans-serif;
   color: #ebebff;

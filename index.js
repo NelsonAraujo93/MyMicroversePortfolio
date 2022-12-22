@@ -260,7 +260,33 @@ const init = () => {
   const worksDesk = document.getElementById('works-d-top');
   const worksDeskLeft = document.getElementById('works-d-left');
   const worksDeskRigth = document.getElementById('works-d-rigth');
+  const form = document.getElementById('main-form');
+  const email = document.getElementById('email');
+  let emailValidation = false;
 
+  email.addEventListener('input', (event) => {
+    const lowerCase = event.currentTarget.value.toLowerCase();
+    if (email.validity.typeMismatch) {
+      email.setCustomValidity('This must be an email addres (example@exmaple.com)');
+      email.reportValidity();
+      emailValidation = false;
+    } else if (event.currentTarget.value !== lowerCase) {
+      email.setCustomValidity('The email must be on lowercase');
+      email.reportValidity();
+      emailValidation = false;
+    } else {
+      email.setCustomValidity('');
+      email.reportValidity();
+      emailValidation = true;
+    }
+  });
+  form.addEventListener('submit', (event) => {
+    if (emailValidation) {
+      form.submit();
+    } else {
+      event.preventDefault();
+    }
+  });
   openBtn.addEventListener('click', () => {
     menuContainer.style.display = 'flex';
     openBtn.style.display = 'none';
