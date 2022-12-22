@@ -251,6 +251,25 @@ const dynamicWorksItemsDesktop = (parent1, parent2, parent3, worksArray) => {
   dynamicWorksItems(array4, parent3, 'little');
 };
 
+let userData = {
+  name: '',
+  email: '',
+  message: '',
+};
+
+const getStorageData = (nameInput, emailInput, messageInput) => {
+  if (window.localStorage.user) {
+    userData = JSON.parse(window.localStorage.user);
+    nameInput.value = userData.name;
+    emailInput.value = userData.email;
+    messageInput.value = userData.message;
+  }
+};
+
+const setLocalStorage = () => {
+  window.localStorage.setItem('user', JSON.stringify(userData));
+};
+
 const init = () => {
   const menuItems = document.getElementsByClassName('mobile-item');
   const openBtn = document.getElementById('open-menu-btn');
@@ -262,6 +281,8 @@ const init = () => {
   const worksDeskRigth = document.getElementById('works-d-rigth');
   const form = document.getElementById('main-form');
   const email = document.getElementById('email');
+  const name = document.getElementById('full-name');
+  const message = document.getElementById('message');
   let emailValidation = false;
 
   email.addEventListener('input', (event) => {
@@ -279,10 +300,24 @@ const init = () => {
       email.reportValidity();
       emailValidation = true;
     }
+    userData.email = event.currentTarget.value;
+    setLocalStorage();
   });
+
+  name.addEventListener('input', (event) => {
+    userData.name = event.currentTarget.value;
+    setLocalStorage();
+  });
+
+  message.addEventListener('input', (event) => {
+    userData.message = event.currentTarget.value;
+    setLocalStorage();
+  });
+
   form.addEventListener('submit', (event) => {
     if (emailValidation) {
       form.submit();
+      setLocalStorage(name, email, message);
     } else {
       event.preventDefault();
     }
@@ -304,6 +339,7 @@ const init = () => {
     openBtn.style.display = 'block';
   });
 
+  getStorageData(name, email, message);
   dynamicWorksItems(worksArray, worksMobile);
   dynamicWorksItemsDesktop(worksDesk, worksDeskLeft, worksDeskRigth, worksArray);
 };
