@@ -281,7 +281,12 @@ const init = () => {
     }
   });
 
-  
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (emailValidation) {
+      form.submit();
+    } 
+  });
   
   openBtn.addEventListener('click', () => {
     menuContainer.style.display = 'flex';
