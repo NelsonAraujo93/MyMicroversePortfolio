@@ -281,9 +281,10 @@ const init = () => {
     }
   });
   form.addEventListener('submit', (event) => {
-    event.preventDefault();
     if (emailValidation) {
       form.submit();
+    }else {
+      event.preventDefault();
     }
   });
   openBtn.addEventListener('click', () => {
