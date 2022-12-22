@@ -265,7 +265,7 @@ const init = () => {
   let emailValidation = false;
 
   email.addEventListener('input', (event) => {
-    let lowerCase = event.currentTarget.value.toLowerCase(); 
+    const lowerCase = event.currentTarget.value.toLowerCase();
     if (email.validity.typeMismatch) {
       email.setCustomValidity('This must be an email addres (example@exmaple.com)');
       email.reportValidity();
@@ -280,14 +280,12 @@ const init = () => {
       emailValidation = true;
     }
   });
-
-  form.addEventListener("submit", function (event) {
+  form.addEventListener('submit', (event) => {
     event.preventDefault();
     if (emailValidation) {
       form.submit();
-    } 
+    }
   });
-  
   openBtn.addEventListener('click', () => {
     menuContainer.style.display = 'flex';
     openBtn.style.display = 'none';
