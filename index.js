@@ -306,7 +306,7 @@ const init = () => {
   });
 
   form.addEventListener("submit", function (event) {
-    event.preventDefault();
+    debugger;
     if (emailValidation) {
       setLocalStorage(name, email, message);
       form.submit();
