@@ -80,7 +80,7 @@ const popUp = (item, position) => {
   popUpContent.classList.add('pop-up-content', 'full-width');
   popUpHeader.classList.add('pop-up-header', 'full-width');
 
-  title.classList.add('card-title', 'poppins-font-semibold', 'dark');
+  title.classList.add('card-title', 'poppins-font-extrabold', 'dark');
   title.innerHTML = item.name;
 
   cancelBtn.className = 'menu-btn';

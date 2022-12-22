@@ -76,7 +76,7 @@ body {
 
 .card-title.dark {
   color: #1a2236;
-  height: 80px;
+  height: 50px;
   line-height: 80px;
 }
 
@@ -258,13 +258,13 @@ p {
 .third-btn {
   height: 51px;
   gap: 10px;
-  display: flex;
   justify-content: flex-end;
   align-items: center;
   cursor: pointer;
   background: none;
   border: none;
   width: 50%;
+  display: none;
 }
 
 .third-btn.reverse {
@@ -822,6 +822,7 @@ img.gallery-icon {
 
 .description-pop-up {
   text-align: justify;
+  font-size: 18px;
 }
 
 .navigation-container {
@@ -1277,12 +1278,21 @@ img.gallery-icon {
     gap: 20px;
     width: auto;
     justify-content: space-between;
+    display: flex;
   }
 
   .btn-arrow-icon-black,
   .btn-arrow-reverse-icon {
     height: 25px;
     width: 25px;
+  }
+
+  .card-title.dark {
+    height: 80px;
+  }
+
+  .card-category.ligth {
+    font-size: 20px;
   }
 }
 
