@@ -1,57 +1,57 @@
 const worksArray = [
   {
     name: 'Vagos studios web',
-    description: 'This a website and portfolio.',
-    featured_images: ['./assets/work_1.png', './assets/work_2.png'],
+    description: 'This a website and portfolio for VagosStudios. Vagos Studios is a company that offers services of web development, mobile development, and design.',
+    featured_images: ['./assets/vagos-web.png'],
     technologies: ['Angular.js', 'MongoDB', 'Express.js', 'Node.js'],
     link_demo: 'https://vagosstudios.com',
     link_source: 'https://github.com/NelsonAraujo93/VagosWeb2',
-    image_alts: ['A guy using a laptop and some desk staff', 'A guy using a laptop and some desk staff 2'],
+    image_alts: ['The home page from vagosstudios web'],
   },
   {
-    name: 'Vagos studios web 2',
-    description: 'This a website and portfolio.',
-    featured_images: ['./assets/work_2.png'],
-    technologies: ['Angular.js', 'MongoDB', 'Express.js', 'Node.js'],
-    link_demo: 'https://vagosstudios.com',
-    link_source: 'https://github.com/NelsonAraujo93/VagosWeb2',
-    image_alts: ['A guy using a laptop and some desk staff'],
+    name: 'Trade Roofing web & web app',
+    description: 'This project is a medium one, first i developed a web with wordpress for the company, then i developed a web app with MERN Stack for the company.',
+    featured_images: ['./assets/trade-roofing.png'],
+    technologies: ['MERN-Stack', 'Wordpress'],
+    link_demo: 'https://traderoofing.com',
+    link_source: 'https://github.com/NelsonAraujo93/TradeRoofing.git',
+    image_alts: ['The home page from trade roofing web'],
   },
   {
-    name: 'Vagos studios web 3',
-    description: 'This a website and portfolio.',
-    featured_images: ['./assets/work_3.png'],
+    name: 'Etinca web & web app',
+    description: 'This web app that allow the user upload pdf and videos, also it was developed by many different companies.',
+    featured_images: ['./assets/etnica-web.png'],
     technologies: ['Angular.js', 'MongoDB', 'Express.js', 'Node.js'],
-    link_demo: 'https://vagosstudios.com',
-    link_source: 'https://github.com/NelsonAraujo93/VagosWeb2',
-    image_alts: ['A guy using a laptop and some desk staff'],
+    link_demo: 'https://etnica.com.co/',
+    link_source: 'https://github.com/NelsonAraujo93/etnica.git',
+    image_alts: ['The home page from etnica web'],
   },
   {
-    name: 'Vagos studios web 4',
-    description: 'This a website and portfolio.',
-    featured_images: ['./assets/work_4.png'],
-    technologies: ['Angular.js', 'MongoDB', 'Express.js', 'Node.js'],
-    link_demo: 'https://vagosstudios.com',
-    link_source: 'https://github.com/NelsonAraujo93/VagosWeb2',
-    image_alts: ['A guy using a laptop and some desk staff'],
+    name: 'Nba web app',
+    description: 'This a webapp build in React to get news from the NBA.',
+    featured_images: ['./assets/nba-app.png'],
+    technologies: ['React.js', 'Redux', 'Axios'],
+    link_demo: 'https://nba-news-static.onrender.com/',
+    link_source: 'https://github.com/NelsonAraujo93/capstone-module-3.git',
+    image_alts: ['The home page from nba web app'],
   },
   {
-    name: 'Vagos studios web 5',
-    description: 'This a website and portfolio.',
-    featured_images: ['./assets/work_5.png'],
-    technologies: ['Angular.js', 'MongoDB', 'Express.js', 'Node.js'],
-    link_demo: 'https://vagosstudios.com',
+    name: 'Space Hub web app',
+    description: 'This is web app build in React to get news from the spaceX APIs.',
+    featured_images: ['./assets/space-hub.png'],
+    technologies: ['React.js', 'Redux', 'Axios'],
+    link_demo: 'https://space-travelers-ti6x.onrender.com',
     link_source: 'https://github.com/NelsonAraujo93/VagosWeb2',
-    image_alts: ['A guy using a laptop and some desk staff'],
+    image_alts: ['An image from space hub web app'],
   },
   {
-    name: 'Vagos studios web 6',
-    description: 'This a website and portfolio.',
-    featured_images: ['./assets/work_6.png'],
-    technologies: ['Angular.js', 'MongoDB', 'Express.js', 'Node.js'],
-    link_demo: 'https://vagosstudios.com',
-    link_source: 'https://github.com/NelsonAraujo93/VagosWeb2',
-    image_alts: ['A guy using a laptop and some desk staff'],
+    name: 'Todo list Dynamic-content',
+    description: 'This a website build with vainilla css to work with dynamic content.',
+    featured_images: ['./assets/to-do.png'],
+    technologies: ['JavaScript', 'Css3', 'HMTL5'],
+    link_demo: 'https://nelsonaraujo93.github.io/toDoList/dist/',
+    link_source: 'https://github.com/NelsonAraujo93/toDoList.git',
+    image_alts: ['An screenshot from todo list web app'],
   },
 ];
 
@@ -284,6 +284,24 @@ const init = () => {
   const name = document.getElementById('full-name');
   const message = document.getElementById('message');
   let emailValidation = false;
+  const downloadButton = document.getElementById('download-cv');
+  const downloadResume = document.getElementById('download-rs');
+  // Attach a click event listener to the button
+  downloadButton.addEventListener('click', () => {
+    const filePath = './assets/Nelson-Araujo-Cv.pdf';
+    const link = document.createElement('a');
+    link.href = filePath;
+    link.download = 'Nelson-Araujo-cv.pdf';
+    link.click();
+  });
+
+  downloadResume.addEventListener('click', () => {
+    const filePath = './assets/Nelson-Araujo-Cv.pdf';
+    const link = document.createElement('a');
+    link.href = filePath;
+    link.download = 'Nelson-Araujo-cv.pdf';
+    link.click();
+  });
 
   email.addEventListener('input', (event) => {
     const lowerCase = event.currentTarget.value.toLowerCase();
