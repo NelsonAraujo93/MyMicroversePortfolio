@@ -14,7 +14,7 @@ const worksArray = [
     featured_images: ['./assets/trade-roofing.png'],
     technologies: ['MERN-Stack', 'Wordpress'],
     link_demo: 'https://traderoofing.com',
-    link_source: 'https://github.com/NelsonAraujo93/TradeRoofing.git',
+    link_source: 'https://github.com/NelsonAraujo93/TradeRoofing',
     image_alts: ['The home page from trade roofing web'],
   },
   {
@@ -23,7 +23,7 @@ const worksArray = [
     featured_images: ['./assets/etnica-web.png'],
     technologies: ['Angular.js', 'MongoDB', 'Express.js', 'Node.js'],
     link_demo: 'https://etnica.com.co/',
-    link_source: 'https://github.com/NelsonAraujo93/etnica.git',
+    link_source: 'https://github.com/NelsonAraujo93/etnica',
     image_alts: ['The home page from etnica web'],
   },
   {
@@ -32,7 +32,7 @@ const worksArray = [
     featured_images: ['./assets/nba-app.png'],
     technologies: ['React.js', 'Redux', 'Axios'],
     link_demo: 'https://nba-news-static.onrender.com/',
-    link_source: 'https://github.com/NelsonAraujo93/capstone-module-3.git',
+    link_source: 'https://github.com/NelsonAraujo93/capstone-module-3',
     image_alts: ['The home page from nba web app'],
   },
   {
@@ -41,7 +41,7 @@ const worksArray = [
     featured_images: ['./assets/space-hub.png'],
     technologies: ['React.js', 'Redux', 'Axios'],
     link_demo: 'https://space-travelers-ti6x.onrender.com',
-    link_source: 'https://github.com/NelsonAraujo93/VagosWeb2',
+    link_source: 'https://github.com/jorgeabrahan/space_travelers_hub',
     image_alts: ['An image from space hub web app'],
   },
   {
@@ -50,7 +50,7 @@ const worksArray = [
     featured_images: ['./assets/to-do.png'],
     technologies: ['JavaScript', 'Css3', 'HMTL5'],
     link_demo: 'https://nelsonaraujo93.github.io/toDoList/dist/',
-    link_source: 'https://github.com/NelsonAraujo93/toDoList.git',
+    link_source: 'https://github.com/NelsonAraujo93/toDoList',
     image_alts: ['An screenshot from todo list web app'],
   },
 ];

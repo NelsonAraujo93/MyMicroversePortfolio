@@ -50,6 +50,13 @@ body {
   border: none;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
 .poppins-font-regular {
   font-family: 'Poppins', sans-serif;
 }
@@ -250,6 +257,32 @@ p {
 }
 
 .main-btn:active {
+  border: 2px solid #1a2236;
+  background: #fff;
+  color: #1a2236;
+}
+
+.main-btn-a {
+  height: 42px;
+  background: #1a2236;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #1a2236;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.main-btn-a:hover {
+  background: #fff;
+  color: #1a2236;
+}
+
+.main-btn-a:active {
   border: 2px solid #1a2236;
   background: #fff;
   color: #1a2236;
@@ -689,6 +722,34 @@ section.footer-m {
   border: 1px solid #1a2236;
 }
 
+.footer-btn-a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 180px;
+  gap: 8px;
+  color: #92dcdc;
+  background: #1a2236;
+  border: 1px solid #1a2236;
+  transition: all 250ms ease-in-out;
+  height: 44px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer-btn-a:hover {
+  background: white;
+  color: #1a2236;
+  border: 1px solid #1a2236;
+}
+
+.footer-btn-a:active {
+  background: white;
+  color: #1a2236;
+  border: 1px solid #1a2236;
+}
+
 .btn-footer-icon {
   width: 25px;
   height: 25px;
@@ -905,6 +966,11 @@ img.gallery-icon {
   }
 
   button.main-btn.full-width {
+    max-width: 254px;
+    height: 70px;
+  }
+
+  .main-btn-a.full-width {
     max-width: 254px;
     height: 70px;
   }
