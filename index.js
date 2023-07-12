@@ -284,16 +284,8 @@ const init = () => {
   const name = document.getElementById('full-name');
   const message = document.getElementById('message');
   let emailValidation = false;
-  const downloadButton = document.getElementById('download-cv');
   const downloadResume = document.getElementById('download-rs');
   // Attach a click event listener to the button
-  downloadButton.addEventListener('click', () => {
-    const filePath = './assets/Nelson-Araujo-Cv.pdf';
-    const link = document.createElement('a');
-    link.href = filePath;
-    link.download = 'Nelson-Araujo-cv.pdf';
-    link.click();
-  });
 
   downloadResume.addEventListener('click', () => {
     const filePath = './assets/Nelson-Araujo-Cv.pdf';
