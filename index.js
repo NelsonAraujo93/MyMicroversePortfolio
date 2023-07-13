@@ -284,16 +284,6 @@ const init = () => {
   const name = document.getElementById('full-name');
   const message = document.getElementById('message');
   let emailValidation = false;
-  const downloadResume = document.getElementById('download-rs');
-  // Attach a click event listener to the button
-
-  downloadResume.addEventListener('click', () => {
-    const filePath = './assets/Nelson-Araujo-Cv.pdf';
-    const link = document.createElement('a');
-    link.href = filePath;
-    link.download = 'Nelson-Araujo-cv.pdf';
-    link.click();
-  });
 
   email.addEventListener('input', (event) => {
     const lowerCase = event.currentTarget.value.toLowerCase();
